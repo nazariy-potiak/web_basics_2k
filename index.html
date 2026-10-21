@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Пам'ятки Карпат — Екологічний путівник по Гуцульщині</title>
-    <meta name="description" content="Дізнайтеся про 18 найвідоміших пам'яток Карпат, Гуцульщини та Західної України. Відвідайте Верховину, Говерлу, Синевир та замки регіону.">
+    <meta name="description" content="Дізнайтеся про найвідоміші пам'ятки Карпат, Гуцульщини та Західної України: Верховина, Говерла, Синевир, Буковель та музеї регіону.">
     <meta name="keywords" content="Карпати, Гуцульщина, Говерла, Синевир, Верховина, Західна Україна, туризм, мандрівки">
     <meta name="author" content="Потяк Назарій">
 
@@ -24,6 +24,7 @@
                     <li><a href="#places" class="nav-link">Галерея</a></li>
                     <li><a href="#lists" class="nav-link">Поради</a></li>
                     <li><a href="#info" class="nav-link">Характеристики</a></li>
+                    <li><a href="#contact" class="nav-link">Контакти</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,8 +35,9 @@
 
         <section class="site-section hero-section" id="about">
             <h2 class="section-title">Огляд регіону</h2>            
+            
             <div class="main-image-wrapper">
-                <img src="https://gymnasiumprestige.lviv.ua/wp-content/uploads/2026/06/guculi-grayt-na-trubah.png" alt="Гуцульські музиканти грають на трембітах на тлі Карпатських гір" class="main-img">
+                <img src="https://gymnasiumprestige.lviv.ua/wp-content/uploads/2026/06/guculi-grayt-na-trubah.png" alt="Гуцульські музиканти у традиційному одязі грають на трембітах на тлі Карпат" class="main-img">
             </div>
 
             <p class="intro">
@@ -150,7 +152,7 @@
                     <ul class="styled-list">
                         <li>Відвідати гуцульський музей у Верховині</li>
                         <li>Зробити фото біля озера Синевир</li>
-                        <li>Побачити Чернівецький университет</li>
+                        <li>Побачити Чернівецький університет</li>
                         <li>Скуштувати традиційний банош</li>
                     </ul>
                 </div>
@@ -209,11 +211,76 @@
                 </table>
             </div>
         </section>
+
+        <section class="site-section" id="contact">
+            <h2 class="section-title">Зворотний зв'язок та консультації</h2>
+            <p>Маєте запитання щодо туру або бажаєте отримати додаткову інформацію про пам'ятки? Заповніть форму нижче:</p>
+
+            <form action="#" method="POST" class="feedback-form">
+                
+                <fieldset class="form-group-fieldset">
+                    <legend>Контактні дані</legend>
+                    
+                    <div class="form-field">
+                        <label for="user_name">Ваше ім'я <span class="required-star">*</span></label>
+                        <input type="text" id="user_name" name="user_name" placeholder="Олександр Потяк" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="user_email">Електронна пошта <span class="required-star">*</span></label>
+                        <input type="email" id="user_email" name="user_email" placeholder="example@domain.com" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group-fieldset">
+                    <legend>Деталі звернення</legend>
+                    
+                    <div class="form-field">
+                        <label for="subject_select">Оберіть тему звернення</label>
+                        <select id="subject_select" name="subject">
+                            <option value="" disabled selected>--- Оберіть варіант ---</option>
+                            <option value="tour_info">Консультація по маршруту</option>
+                            <option value="museum_booking">Бронювання екскурсії у музей</option>
+                            <option value="general_question">Загальне запитання</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <span class="field-group-label">Бажаний спосіб зв'язку:</span>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="contact_email" name="contact_method" value="email" checked>
+                                <label for="contact_email">Відповісти на Email</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="contact_phone" name="contact_method" value="phone">
+                                <label for="contact_phone">Зателефонувати</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="user_message">Ваше повідомлення або коментар</label>
+                        <textarea id="user_message" name="user_message" rows="4" placeholder="Опишіть ваше запитання детальніше..."></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="form-field checkbox-field">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Я погоджуюсь на обробку персональних даних <span class="required-star">*</span></label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Надіслати повідомлення</button>
+                </div>
+
+            </form>
+        </section>
     </main>
 
     <footer class="footer">
         <div class="container footer-container">
-            <p><strong>Карпатські Мандри</strong> &copy; 2026. Навчальний проєкт з дисципліни "Веб-технології".</p>
+            <p><strong>Карпатські Мандри</strong> &copy; <time datetime="2026">2026</time>. Навчальний проєкт з дисципліни "Веб-технології".</p>
             <p>Виконав студент групи КІПЗс-25-2: <strong>Потяк Назарій</strong></p>
             <p>Контакти для зв'язку: <a href="mailto:nazarii.potyak@example.com" class="footer-link">nazarii.potyak@example.com</a></p>
         </div>
