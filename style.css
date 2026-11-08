@@ -19,6 +19,13 @@ body {
     color: #0b251a; 
     line-height: 1.6; 
     padding-top: 90px;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 :focus-visible {
@@ -86,6 +93,8 @@ header nav a,
     font-weight: 600;
     display: inline-block;
     position: relative;
+    min-height: 44px;
+    line-height: 28px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -94,7 +103,6 @@ header nav a:hover,
     color: #ffffff;
     background-color: #166534;
     transform: translateY(-2px);
-    /* Підсвічування символів за завданням 2.2 */
     text-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -170,7 +178,6 @@ header nav a:hover,
     margin-bottom: 0;
 }
 
-
 #page-title {
     font-size: 2.5rem;
     font-weight: 800;
@@ -207,7 +214,6 @@ p {
     font-size: 1.05rem;
 }
 
-
 .text-link {
     color: #4ade80;
     font-weight: 700;
@@ -220,18 +226,6 @@ p {
 .text-link:hover {
     color: #ffffff;
     background-color: #166534;
-}
-
-.intro {
-    font-size: 1.15rem;
-    font-style: italic;
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1.2rem;
-    border-left: 5px solid #4ade80;
-    border-radius: 6px;
-    margin-bottom: 1.5rem;
-    backdrop-filter: blur(4px);
 }
 
 .highlight {
@@ -271,7 +265,7 @@ p {
 
 .grid-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin-top: 1.5rem;
 }
@@ -320,6 +314,7 @@ article:active,
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     letter-spacing: 0.5px;
+    z-index: 2;
 }
 
 .badge-accent {
@@ -488,6 +483,7 @@ textarea:focus {
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    min-height: 44px;
 }
 
 .radio-option label {
@@ -500,8 +496,8 @@ textarea:focus {
 .radio-option input[type="radio"],
 .checkbox-field input[type="checkbox"] {
     accent-color: #166534;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
 }
 
@@ -511,6 +507,7 @@ textarea:focus {
     gap: 10px;
     margin-top: 10px;
     margin-bottom: 25px;
+    min-height: 44px;
 }
 
 .checkbox-field label {
@@ -535,6 +532,7 @@ button {
     font-weight: 700;
     cursor: pointer;
     width: 100%;
+    min-height: 48px; 
     box-shadow: 0 4px 6px -1px rgba(22, 101, 52, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -550,7 +548,6 @@ button:active {
     transform: translateY(1px);
     box-shadow: 0 4px 6px -1px rgba(22, 101, 52, 0.2);
 }
-
 
 .footer {
     background: linear-gradient(135deg, #14532d 0%, #166534 100%);
@@ -580,8 +577,8 @@ button:active {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     background: linear-gradient(135deg, #14532d, #166534);
     color: #ffffff;
     border: 2px solid #22c55e;
@@ -610,6 +607,123 @@ button:active {
     transform: translateY(-1px) scale(1.02);
 }
 
+@media screen and (max-width: 1024px) {
+    .grid-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .site-section {
+        padding: 25px 20px;
+        margin-bottom: 25px;
+    }
+
+    #page-title {
+        font-size: 2.1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0.8rem 0;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    header nav a,
+    .nav-link {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.95rem;
+    }
+
+    body {
+        padding-top: 130px;
+    }
+
+    html {
+        scroll-padding-top: 140px;
+    }
+
+    .grid-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    article,
+    .place-card {
+        width: 100%;
+    }
+
+    .feedback-form {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .form-group-fieldset {
+        padding: 15px 12px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .lists-wrapper {
+        flex-direction: column;
+    }
+
+    .list-box {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #page-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    .site-section {
+        padding: 20px 12px;
+    }
+
+    .btn-top,
+    .back-to-top {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .place-card.has-badge {
+        padding-top: 25px;
+    }
+
+    .badge {
+        top: 8px;
+        right: 10px;
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+}
 
 @media (prefers-reduced-motion: reduce) {
     *,
